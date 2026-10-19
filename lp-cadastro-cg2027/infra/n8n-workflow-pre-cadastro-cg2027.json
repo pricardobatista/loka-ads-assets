@@ -1,0 +1,106 @@
+{
+  "name": "LM | Pré-cadastro CG Start 2027 (LP → Supabase)",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "pre-cadastro-cg2027",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://cadastro.lokamotoka.com.br"
+        }
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "name": "Webhook LP",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "webhookId": "pre-cadastro-cg2027"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Validação servidor-side (não confiar no front)\nconst b = $input.first().json.body || {};\nconst erros = [];\nconst ok = (v, lista) => lista.includes(v);\n\n// honeypot + tempo mínimo (bots)\nif ((b.empresa || '').trim() !== '') return [{ json: { valido: false, bot: true, erros: ['bot'] } }];\nif (Number(b.tempo_preenchimento_s || 0) < 4) return [{ json: { valido: false, bot: true, erros: ['rapido_demais'] } }];\n\nconst nome = String(b.nome || '').trim().replace(/\\s+/g, ' ').slice(0, 120);\nif (nome.split(' ').length < 2) erros.push('nome');\n\nconst dig = String(b.whatsapp_original || '').replace(/\\D/g, '');\nif (!/^[1-9]{2}9\\d{8}$/.test(dig)) erros.push('whatsapp');\nconst whatsapp_normalizado = '55' + dig;\n\nlet email = String(b.email || '').trim().toLowerCase().slice(0, 160);\nif (email && !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(email)) erros.push('email');\nif (!email) email = null;\n\nif (!ok(b.estado_civil, ['Solteiro(a)', 'Casado(a)'])) erros.push('estado_civil');\nif (!ok(b.cnh_a, ['Sim', 'Não'])) erros.push('cnh_a');\nif (!ok(b.ear, ['Sim', 'Não', 'Não sei informar'])) erros.push('ear');\nif (!ok(b.atividade_app, ['Sim, com delivery (iFood, 99Food etc.)', 'Sim, com transporte de passageiros (Uber/99)', 'Sim, com delivery e transporte de passageiros', 'Não, ainda não trabalho com aplicativos'])) erros.push('atividade_app');\nif (!ok(b.previsao_inicio, ['Em novembro, assim que estiver disponível', 'Nos próximos 30 dias', 'Daqui a 2 ou 3 meses', 'Estou apenas pesquisando'])) erros.push('previsao_inicio');\nif (!ok(b.cidade, ['Americana', \"Santa Bárbara d'Oeste\", 'Nova Odessa', 'Outra cidade'])) erros.push('cidade');\nif (b.consentimento !== true) erros.push('consentimento');\n\nconst limpa = (s, n) => (s == null ? null : String(s).slice(0, n));\n\nreturn [{ json: {\n  valido: erros.length === 0,\n  erros,\n  registro: {\n    nome, estado_civil: b.estado_civil, whatsapp_original: String(b.whatsapp_original || '').slice(0, 20), whatsapp_normalizado, email,\n    cnh_a: b.cnh_a, ear: b.ear, atividade_app: b.atividade_app, previsao_inicio: b.previsao_inicio, cidade: b.cidade,\n    consentimento: true, consentimento_texto: limpa(b.consentimento_texto, 500), consentimento_versao: limpa(b.consentimento_versao, 20) || 'v1-2026-10',\n    origem: limpa(b.origem, 60), campanha: limpa(b.campanha, 80), conteudo: limpa(b.conteudo, 80), user_agent: limpa(b.user_agent, 300)\n  }\n} }];"
+      },
+      "id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "name": "Validar e normalizar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.valido }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "true", "singleValue": true }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "name": "Válido?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [480, 0]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "select public.upsert_pre_cadastro_cg2027($1::jsonb) as resultado;",
+        "options": {
+          "queryReplacement": "={{ JSON.stringify($json.registro) }}"
+        }
+      },
+      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "name": "Supabase · upsert",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [720, -100],
+      "credentials": {
+        "postgres": { "id": "CONFIGURAR", "name": "Supabase Loka (Postgres)" }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: true } }}",
+        "options": { "responseCode": 200 }
+      },
+      "id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "name": "Responder OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [960, -100]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json.bot ? { ok: true } : { ok: false, erros: $json.erros } }}",
+        "options": { "responseCode": "={{ $json.bot ? 200 : 422 }}" }
+      },
+      "id": "a1b2c3d4-0006-4000-8000-000000000006",
+      "name": "Responder inválido",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [720, 120]
+    }
+  ],
+  "connections": {
+    "Webhook LP": { "main": [[{ "node": "Validar e normalizar", "type": "main", "index": 0 }]] },
+    "Validar e normalizar": { "main": [[{ "node": "Válido?", "type": "main", "index": 0 }]] },
+    "Válido?": {
+      "main": [
+        [{ "node": "Supabase · upsert", "type": "main", "index": 0 }],
+        [{ "node": "Responder inválido", "type": "main", "index": 0 }]
+      ]
+    },
+    "Supabase · upsert": { "main": [[{ "node": "Responder OK", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1", "saveDataSuccessExecution": "none", "saveDataErrorExecution": "all" }
+}

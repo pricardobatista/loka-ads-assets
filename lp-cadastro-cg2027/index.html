@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pré-cadastro · Honda CG Start 2027 zero km · Loka Motoka</title>
+<meta name="description" content="6 novas Honda CG Start 2027 zero km chegando em novembro na Loka Motoka. Faça seu pré-cadastro gratuito e receba as informações em primeira mão.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6B1CF2">
+<meta property="og:title" content="6 novas motos zero km na Loka Motoka">
+<meta property="og:description" content="Honda CG Start 2027 com previsão de chegada em novembro. Faça seu pré-cadastro.">
+<meta property="og:image" content="assets/motos-cg-start-2027.png">
+<link rel="icon" href="assets/logo-loka.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gelo:#F2F1F6;
+  --branco:#FFFFFF;
+  --roxo:#6B1CF2;
+  --roxo-escuro:#4B12C9;
+  --roxo-claro:#EDE5FE;
+  --grafite:#16131F;
+  --cinza:#625E70;
+  --linha:#DCD8E6;
+  --erro:#C4213A;
+  --raio:18px;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --texto:"Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--gelo);color:var(--grafite);font-family:var(--texto);font-size:17px;line-height:1.5;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--roxo-escuro)}
+:focus-visible{outline:3px solid var(--roxo);outline-offset:3px;border-radius:6px}
+
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ---------- topo ---------- */
+.topo{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.topo img{width:56px;height:56px}
+.topo span{font-size:14px;color:var(--cinza);font-weight:500}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:12px 0 0;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-140px;top:-60px;width:420px;height:420px;border:2px solid var(--roxo);border-radius:120px;transform:rotate(38deg);opacity:.35;pointer-events:none}
+.hero::after{content:"";position:absolute;left:-250px;top:150px;display:none;width:360px;height:360px;background:linear-gradient(135deg,var(--roxo),#9B6BFF);border-radius:110px;transform:rotate(38deg);opacity:.9;pointer-events:none;z-index:0}
+.em-breve{font-family:var(--display);font-weight:600;font-size:clamp(18px,4.6vw,24px);letter-spacing:.42em;padding-left:.42em;color:var(--grafite);position:relative;z-index:1}
+.manchete{font-family:var(--display);font-style:italic;font-weight:900;line-height:.84;text-transform:uppercase;margin-top:10px;position:relative;z-index:1}
+.manchete .l1{display:block;font-size:clamp(52px,15.5vw,120px);color:var(--grafite);letter-spacing:-.01em}
+.manchete .l2{display:block;font-size:clamp(96px,30vw,236px);color:var(--roxo);letter-spacing:-.02em;margin-top:2px;
+  background:linear-gradient(100deg,#7A2BFF 10%,var(--roxo-escuro) 90%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.modelo{font-family:var(--display);font-weight:600;font-size:clamp(22px,6vw,34px);letter-spacing:.14em;padding-left:.14em;margin-top:14px;position:relative;z-index:1}
+.traco{width:64px;height:4px;border-radius:4px;background:var(--roxo);margin:12px auto 10px}
+.previsao{font-size:clamp(13px,3.4vw,15px);letter-spacing:.28em;padding-left:.28em;color:var(--cinza);font-weight:500;position:relative;z-index:1}
+.motos{position:relative;z-index:1;margin:18px auto 0;max-width:980px;width:108%;margin-left:-4%}
+@media (min-width:900px){.motos{width:100%;margin-left:auto}.hero::after{display:block}}
+@media (max-width:480px){
+  .hero::before{top:-230px;right:-200px}
+  .previsao{letter-spacing:.14em;padding-left:.14em;font-size:12.5px}
+  .cta-nota{letter-spacing:.12em;padding-left:.12em;font-size:12px}
+  .modelo{letter-spacing:.1em;padding-left:.1em}
+}
+
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;background:var(--roxo);color:#fff;text-decoration:none;
+  font-family:var(--display);font-style:italic;font-weight:800;font-size:clamp(22px,5.6vw,28px);text-transform:uppercase;letter-spacing:.01em;
+  padding:16px 34px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 14px 30px -12px rgba(75,18,201,.65);transition:background .2s, transform .2s}
+.cta:hover{background:var(--roxo-escuro)}
+.cta:active{transform:scale(.98)}
+.cta svg{width:22px;height:22px;flex:none}
+.hero .cta{position:relative;z-index:2;margin-top:-6px}
+.cta-nota{font-size:13px;letter-spacing:.24em;padding-left:.24em;color:var(--cinza);margin:14px 0 48px;position:relative;z-index:1}
+
+/* ---------- inclusos ---------- */
+.secao{padding:56px 0}
+.titulo{font-family:var(--display);font-style:italic;font-weight:800;font-size:clamp(34px,8.4vw,52px);line-height:.95;text-transform:uppercase}
+.sub{color:var(--cinza);margin-top:10px;max-width:56ch}
+.inclusos{background:var(--branco)}
+.lista-inclusos{list-style:none;margin-top:28px;display:grid;gap:0;border-top:1px solid var(--linha)}
+.lista-inclusos li{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;padding:18px 0;border-bottom:1px solid var(--linha)}
+.lista-inclusos .ic{width:48px;height:48px;border-radius:14px;background:var(--roxo-claro);display:grid;place-items:center;color:var(--roxo)}
+.lista-inclusos .ic svg{width:24px;height:24px}
+.lista-inclusos strong{display:block;font-size:18px;font-weight:700}
+.lista-inclusos span{color:var(--cinza);font-size:15px}
+@media (min-width:900px){
+  .inclusos .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  .lista-inclusos{margin-top:0}
+}
+
+/* ---------- como funciona ---------- */
+.passos{list-style:none;counter-reset:p;margin-top:30px;display:grid;gap:22px}
+.passos li{counter-increment:p;display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start}
+.passos li::before{content:counter(p);font-family:var(--display);font-style:italic;font-weight:900;font-size:44px;line-height:1;color:var(--roxo);text-align:center}
+.passos strong{display:block;font-size:18px}
+.passos span{color:var(--cinza);font-size:15px}
+@media (min-width:900px){
+  .passos{grid-template-columns:repeat(4,1fr);gap:28px}
+  .passos li{grid-template-columns:1fr;gap:6px}
+  .passos li::before{text-align:left;font-size:56px}
+}
+
+/* ---------- formulário ---------- */
+.cadastro{padding:56px 0 72px;background:linear-gradient(180deg,var(--gelo),#E9E4F7)}
+.cartao{background:var(--branco);border-radius:26px;padding:26px 20px 24px;max-width:620px;margin:28px auto 0;box-shadow:0 30px 60px -38px rgba(46,16,120,.45);border:1px solid #E7E2F3}
+@media (min-width:600px){.cartao{padding:36px 40px 32px}}
+.progresso{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.progresso .barra{flex:1;height:6px;background:var(--roxo-claro);border-radius:6px;overflow:hidden}
+.progresso .barra i{display:block;height:100%;width:25%;background:var(--roxo);border-radius:6px;transition:width .35s ease}
+.progresso small{font-size:13px;color:var(--cinza);font-weight:600;white-space:nowrap}
+.etapa{display:none}
+.etapa.ativa{display:block}
+.etapa h3{font-family:var(--display);font-style:italic;font-weight:800;font-size:30px;line-height:1;text-transform:uppercase;margin-bottom:6px}
+.etapa .dica{color:var(--cinza);font-size:15px;margin-bottom:18px}
+
+.campo{margin-bottom:16px}
+.campo label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+.campo label em{font-style:normal;color:var(--cinza);font-weight:500}
+.campo input{width:100%;font:inherit;font-size:17px;padding:14px 16px;border:1.5px solid var(--linha);border-radius:14px;background:#FBFAFD;color:var(--grafite);transition:border-color .2s}
+.campo input:focus{outline:none;border-color:var(--roxo);background:#fff;box-shadow:0 0 0 4px var(--roxo-claro)}
+.campo.invalido input{border-color:var(--erro)}
+
+fieldset{border:0;margin-bottom:20px}
+legend{font-weight:700;font-size:16px;margin-bottom:10px;line-height:1.35}
+.opcoes{display:grid;gap:10px}
+.opcoes.duas{grid-template-columns:1fr 1fr}
+.opcao{position:relative}
+.opcao input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.opcao span{display:flex;align-items:center;gap:12px;min-height:54px;padding:12px 16px;border:1.5px solid var(--linha);border-radius:14px;background:#FBFAFD;font-weight:600;font-size:16px;line-height:1.25;cursor:pointer;transition:border-color .15s, background .15s}
+.opcao span::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;border:2px solid #B9B3C9;background:#fff;transition:all .15s}
+.opcao input:checked + span{border-color:var(--roxo);background:var(--roxo-claro);color:var(--roxo-escuro)}
+.opcao input:checked + span::before{border-color:var(--roxo);background:radial-gradient(circle,var(--roxo) 0 45%,#fff 50%)}
+.opcao input:focus-visible + span{outline:3px solid var(--roxo);outline-offset:2px}
+fieldset.invalido .opcao span{border-color:#E9A7B2}
+
+.consentimento{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;padding:16px;border-radius:14px;background:#F7F4FD;border:1.5px solid var(--linha);margin-bottom:8px;font-size:14.5px;line-height:1.45;cursor:pointer}
+.consentimento input{width:22px;height:22px;accent-color:var(--roxo);margin-top:1px;cursor:pointer}
+.consentimento.invalido{border-color:var(--erro)}
+
+.msg-erro{color:var(--erro);font-size:14px;font-weight:600;margin-top:-6px;margin-bottom:12px;min-height:0}
+.msg-erro:empty{display:none}
+.aviso{font-size:13.5px;color:var(--cinza);margin:14px 0 4px}
+
+.acoes{display:flex;gap:12px;align-items:center;margin-top:8px}
+.acoes .cta{flex:1;font-size:clamp(19px,5.2vw,24px);padding:15px 20px;white-space:nowrap}
+.voltar{background:none;border:0;font:inherit;font-weight:600;color:var(--cinza);padding:14px 8px;cursor:pointer;border-radius:10px}
+.voltar:hover{color:var(--grafite)}
+.cta[disabled]{opacity:.6;cursor:wait}
+
+.mel{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.sucesso{text-align:center;padding:10px 4px}
+.sucesso .selo{width:76px;height:76px;border-radius:50%;background:var(--roxo);color:#fff;display:grid;place-items:center;margin:0 auto 18px;box-shadow:0 14px 30px -12px rgba(75,18,201,.65)}
+.sucesso .selo svg{width:38px;height:38px}
+.sucesso h3{font-family:var(--display);font-style:italic;font-weight:900;font-size:40px;line-height:1;text-transform:uppercase;margin-bottom:12px}
+.sucesso p{color:var(--cinza);max-width:44ch;margin:0 auto 10px}
+
+/* ---------- rodapé ---------- */
+.rodape{background:var(--grafite);color:#CFCBDA;padding:36px 0 44px;font-size:14px}
+.rodape .wrap{display:grid;gap:16px}
+.rodape img{width:52px;height:52px}
+.rodape strong{color:#fff}
+.rodape a{color:#C9B6FF}
+@media (min-width:900px){.rodape .wrap{grid-template-columns:auto 1fr auto;align-items:center;gap:28px}}
+
+/* ---------- movimento ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .manchete .l2{animation:entra .9s cubic-bezier(.2,.8,.2,1) both .1s}
+  .motos{animation:motos 1.1s cubic-bezier(.2,.8,.2,1) both .35s}
+  @keyframes entra{from{opacity:0;transform:translateX(-24px) skewX(-6deg)}to{opacity:1;transform:none}}
+  @keyframes motos{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+  .etapa.ativa{animation:etapa .3s ease both}
+  @keyframes etapa{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="wrap topo">
+  <img src="assets/logo-loka.png" alt="Loka Motoka" width="56" height="56">
+  <span>Americana e região</span>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="manchete">
+    <div class="wrap">
+      <p class="em-breve">EM BREVE</p>
+      <h1 class="manchete" id="manchete">
+        <span class="l1">6 novas motos</span>
+        <span class="l2">Zero km</span>
+      </h1>
+      <p class="modelo">HONDA CG START 2027</p>
+      <div class="traco" aria-hidden="true"></div>
+      <p class="previsao">PREVISÃO DE CHEGADA EM NOVEMBRO</p>
+      <img class="motos" src="assets/motos-cg-start-2027.png" alt="Três Honda CG Start 2027 zero km nas cores preta, azul e vermelha" width="1080" height="423" fetchpriority="high">
+      <a class="cta" href="#cadastro" data-ir-form>Fazer meu pré-cadastro
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+      <p class="cta-nota">RECEBA AS INFORMAÇÕES EM PRIMEIRA MÃO</p>
+    </div>
+  </section>
+
+  <section class="secao inclusos" aria-labelledby="t-inclusos">
+    <div class="wrap">
+      <div>
+        <h2 class="titulo" id="t-inclusos">Você só pilota.<br>O resto é com a gente.</h2>
+        <p class="sub">Na locação da Loka Motoka, a moto já vem com o que costuma dar dor de cabeça para quem trabalha na rua.</p>
+      </div>
+      <ul class="lista-inclusos">
+        <li>
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+          <div><strong>Documentação anual em dia</strong><span>Licenciamento por nossa conta.</span></div>
+        </li>
+        <li>
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+          <div><strong>Manutenção preventiva</strong><span>Pneu, relação e freio inclusos.</span></div>
+        </li>
+        <li>
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div><strong>Seguro e guincho</strong><span>Rodar tranquilo também faz parte do trabalho.</span></div>
+        </li>
+        <li>
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+          <div><strong>Pagamento semanal</strong><span>Combina com o ritmo de quem recebe por semana.</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="secao" aria-labelledby="t-como">
+    <div class="wrap">
+      <h2 class="titulo" id="t-como">Como funciona</h2>
+      <ol class="passos">
+        <li><div><strong>Pré-cadastro</strong><span>Leva menos de 1 minuto e é gratuito.</span></div></li>
+        <li><div><strong>Aviso da chegada</strong><span>Quando as motos chegarem, falamos com você pelo WhatsApp.</span></div></li>
+        <li><div><strong>Análise e contrato</strong><span>Conferimos seus dados e documentos para liberar a locação.</span></div></li>
+        <li><div><strong>Retirada da moto</strong><span>Você sai rodando com uma CG Start 2027 zero km.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cadastro" id="cadastro" aria-labelledby="t-cadastro">
+    <div class="wrap">
+      <h2 class="titulo" id="t-cadastro" style="text-align:center">Faça seu pré-cadastro</h2>
+      <p class="sub" style="margin:10px auto 0;text-align:center">São só 4 etapas. Quem se cadastra recebe as informações antes.</p>
+
+      <div class="cartao">
+        <form id="form" novalidate>
+          <div class="progresso" id="progresso">
+            <div class="barra"><i id="barra"></i></div>
+            <small id="contador" aria-live="polite">Etapa 1 de 4</small>
+          </div>
+
+          <!-- etapa 1 -->
+          <div class="etapa ativa" data-etapa="1">
+            <h3>Seus dados</h3>
+            <p class="dica">Para avisarmos você quando as motos chegarem.</p>
+            <div class="campo">
+              <label for="nome">Nome completo</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required maxlength="120">
+            </div>
+            <div class="campo">
+              <label for="whatsapp">Telefone / WhatsApp</label>
+              <input id="whatsapp" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(19) 99999-9999" required maxlength="16">
+            </div>
+            <div class="campo">
+              <label for="email">E-mail <em>(opcional)</em></label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="160">
+            </div>
+            <fieldset data-obrig>
+              <legend>Estado civil</legend>
+              <div class="opcoes duas">
+                <label class="opcao"><input type="radio" name="estado_civil" value="Solteiro(a)"><span>Solteiro(a)</span></label>
+                <label class="opcao"><input type="radio" name="estado_civil" value="Casado(a)"><span>Casado(a)</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- etapa 2 -->
+          <div class="etapa" data-etapa="2">
+            <h3>Habilitação</h3>
+            <p class="dica">Só para saber em que ponto você está.</p>
+            <fieldset data-obrig>
+              <legend>Possui CNH categoria A válida?</legend>
+              <div class="opcoes duas">
+                <label class="opcao"><input type="radio" name="cnh_a" value="Sim"><span>Sim</span></label>
+                <label class="opcao"><input type="radio" name="cnh_a" value="Não"><span>Não</span></label>
+              </div>
+            </fieldset>
+            <fieldset data-obrig>
+              <legend>Sua CNH possui EAR (Exerce Atividade Remunerada)?</legend>
+              <div class="opcoes">
+                <label class="opcao"><input type="radio" name="ear" value="Sim"><span>Sim</span></label>
+                <label class="opcao"><input type="radio" name="ear" value="Não"><span>Não</span></label>
+                <label class="opcao"><input type="radio" name="ear" value="Não sei informar"><span>Não sei informar</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- etapa 3 -->
+          <div class="etapa" data-etapa="3">
+            <h3>Seu trabalho</h3>
+            <p class="dica">Ajuda a gente a preparar a melhor condição para você.</p>
+            <fieldset data-obrig>
+              <legend>Atualmente trabalha com aplicativos?</legend>
+              <div class="opcoes">
+                <label class="opcao"><input type="radio" name="atividade_app" value="Sim, com delivery (iFood, 99Food etc.)"><span>Sim, com delivery (iFood, 99Food etc.)</span></label>
+                <label class="opcao"><input type="radio" name="atividade_app" value="Sim, com transporte de passageiros (Uber/99)"><span>Sim, com transporte de passageiros (Uber/99)</span></label>
+                <label class="opcao"><input type="radio" name="atividade_app" value="Sim, com delivery e transporte de passageiros"><span>Sim, com delivery e transporte de passageiros</span></label>
+                <label class="opcao"><input type="radio" name="atividade_app" value="Não, ainda não trabalho com aplicativos"><span>Não, ainda não trabalho com aplicativos</span></label>
+              </div>
+            </fieldset>
+            <fieldset data-obrig>
+              <legend>Quando pretende começar a locação?</legend>
+              <div class="opcoes">
+                <label class="opcao"><input type="radio" name="previsao_inicio" value="Em novembro, assim que estiver disponível"><span>Em novembro, assim que estiver disponível</span></label>
+                <label class="opcao"><input type="radio" name="previsao_inicio" value="Nos próximos 30 dias"><span>Nos próximos 30 dias</span></label>
+                <label class="opcao"><input type="radio" name="previsao_inicio" value="Daqui a 2 ou 3 meses"><span>Daqui a 2 ou 3 meses</span></label>
+                <label class="opcao"><input type="radio" name="previsao_inicio" value="Estou apenas pesquisando"><span>Estou apenas pesquisando</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- etapa 4 -->
+          <div class="etapa" data-etapa="4">
+            <h3>Quase lá</h3>
+            <p class="dica">Última etapa.</p>
+            <fieldset data-obrig>
+              <legend>Em qual cidade pretende utilizar a moto?</legend>
+              <div class="opcoes duas">
+                <label class="opcao"><input type="radio" name="cidade" value="Americana"><span>Americana</span></label>
+                <label class="opcao"><input type="radio" name="cidade" value="Santa Bárbara d'Oeste"><span>Santa Bárbara d'Oeste</span></label>
+                <label class="opcao"><input type="radio" name="cidade" value="Nova Odessa"><span>Nova Odessa</span></label>
+                <label class="opcao"><input type="radio" name="cidade" value="Outra cidade"><span>Outra cidade</span></label>
+              </div>
+            </fieldset>
+            <label class="consentimento" id="box-consent">
+              <input type="checkbox" id="consentimento" name="consentimento">
+              <span id="texto-consent">Autorizo a Loka Motoka a entrar em contato comigo pelo WhatsApp para informar sobre a disponibilidade das novas motocicletas e suas condições de locação, conforme a <a href="https://privacidade.lokamotoka.com.br/" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
+            </label>
+            <div class="mel" aria-hidden="true">
+              <label for="empresa">Empresa</label>
+              <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="aviso">O pré-cadastro não garante reserva ou aprovação cadastral.</p>
+          </div>
+
+          <p class="msg-erro" id="erro" role="alert"></p>
+
+          <div class="acoes" id="acoes">
+            <button type="button" class="voltar" id="btn-voltar" hidden>Voltar</button>
+            <button type="submit" class="cta" id="btn-avancar">Continuar
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="sucesso" id="sucesso" hidden tabindex="-1">
+          <div class="selo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h3>Pré-cadastro recebido!</h3>
+          <p>Obrigado pelo interesse na Loka Motoka. Assim que tivermos novidades sobre disponibilidade e condições de locação, entraremos em contato pelos canais autorizados.</p>
+          <p><small>O pré-cadastro não garante reserva ou aprovação.</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <img src="assets/logo-loka.png" alt="" width="52" height="52">
+    <div>
+      <strong>Loka Motoka</strong> · RAVI LOCAÇÕES E COMÉRCIO LTDA · CNPJ 61.674.856/0001-37<br>
+      Americana/SP · <a href="mailto:contato@lokamotoka.com.br">contato@lokamotoka.com.br</a>
+    </div>
+    <a href="https://privacidade.lokamotoka.com.br/" target="_blank" rel="noopener">Política de Privacidade</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ====== CONFIGURAÇÃO (Hermes: troque pela URL real do webhook do n8n) ======
+  var CONFIG = {
+    webhookUrl: "https://SEU-N8N/webhook/pre-cadastro-cg2027",
+    consentimentoVersao: "v1-2026-10"
+  };
+  var MODO_PREVIA = CONFIG.webhookUrl.indexOf("SEU-N8N") !== -1;
+
+  var form = document.getElementById("form");
+  var etapas = Array.prototype.slice.call(form.querySelectorAll(".etapa"));
+  var total = etapas.length, atual = 1;
+  var barra = document.getElementById("barra"), contador = document.getElementById("contador");
+  var btnAvancar = document.getElementById("btn-avancar"), btnVoltar = document.getElementById("btn-voltar");
+  var erro = document.getElementById("erro");
+  var tel = document.getElementById("whatsapp");
+  var inicio = Date.now();
+
+  // UTMs
+  var qs = new URLSearchParams(location.search);
+  var utm = {
+    origem: qs.get("utm_source") || "direto",
+    campanha: qs.get("utm_campaign") || "",
+    conteudo: qs.get("utm_content") || ""
+  };
+
+  // máscara de telefone
+  tel.addEventListener("input", function(){
+    var d = tel.value.replace(/\D/g,"").slice(0,11);
+    var f = d;
+    if (d.length > 2) f = "(" + d.slice(0,2) + ") " + d.slice(2);
+    if (d.length > 7) f = "(" + d.slice(0,2) + ") " + d.slice(2,7) + "-" + d.slice(7);
+    tel.value = f;
+  });
+
+  // auto-avançar não; só limpa erro ao escolher
+  form.addEventListener("change", function(e){
+    var fs = e.target.closest("fieldset"); if (fs) fs.classList.remove("invalido");
+    if (e.target.id === "consentimento") document.getElementById("box-consent").classList.remove("invalido");
+    erro.textContent = "";
+  });
+  form.addEventListener("input", function(e){
+    var c = e.target.closest(".campo"); if (c) c.classList.remove("invalido");
+  });
+
+  function mostrar(n){
+    etapas.forEach(function(el){ el.classList.toggle("ativa", +el.dataset.etapa === n); });
+    atual = n;
+    barra.style.width = (n/total*100) + "%";
+    contador.textContent = "Etapa " + n + " de " + total;
+    btnVoltar.hidden = n === 1;
+    btnAvancar.firstChild.nodeValue = n === total ? "Enviar pré-cadastro " : "Continuar ";
+    erro.textContent = "";
+    var topo = form.getBoundingClientRect().top + window.scrollY - 24;
+    if (window.scrollY > topo) window.scrollTo({top: topo});
+  }
+
+  function valor(nome){
+    var el = form.querySelector('[name="'+nome+'"]:checked') || form.querySelector('[name="'+nome+'"]:not([type=radio])');
+    return el ? (el.value || "").trim() : "";
+  }
+
+  function validar(n){
+    var etapa = form.querySelector('.etapa[data-etapa="'+n+'"]');
+    var msgs = [];
+    if (n === 1){
+      var nome = valor("nome");
+      if (nome.split(/\s+/).filter(Boolean).length < 2){ marcarCampo("nome"); msgs.push("Informe nome e sobrenome."); }
+      var d = valor("whatsapp").replace(/\D/g,"");
+      if (!/^[1-9]{2}9\d{8}$/.test(d)){ marcarCampo("whatsapp"); msgs.push("Informe um celular com DDD, ex.: (19) 99999-9999."); }
+      var em = valor("email");
+      if (em && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){ marcarCampo("email"); msgs.push("Confira o e-mail ou deixe em branco."); }
+    }
+    etapa.querySelectorAll("fieldset[data-obrig]").forEach(function(fs){
+      if (!fs.querySelector("input:checked")){ fs.classList.add("invalido"); msgs.push("Escolha uma opção em: " + fs.querySelector("legend").textContent); }
+    });
+    if (n === total && !document.getElementById("consentimento").checked){
+      document.getElementById("box-consent").classList.add("invalido");
+      msgs.push("Marque a autorização de contato para enviar.");
+    }
+    erro.textContent = msgs[0] || "";
+    if (msgs.length){
+      var alvo = etapa.querySelector(".invalido input, .invalido");
+      if (alvo && alvo.focus) alvo.focus({preventScroll:false});
+    }
+    return msgs.length === 0;
+  }
+  function marcarCampo(id){ document.getElementById(id).closest(".campo").classList.add("invalido"); }
+
+  btnVoltar.addEventListener("click", function(){ if (atual > 1) mostrar(atual - 1); });
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!validar(atual)) return;
+    if (atual < total){ mostrar(atual + 1); return; }
+    enviar();
+  });
+
+  function enviar(){
+    var d = valor("whatsapp").replace(/\D/g,"");
+    var payload = {
+      nome: valor("nome"),
+      estado_civil: valor("estado_civil"),
+      whatsapp_original: valor("whatsapp"),
+      whatsapp_normalizado: "55" + d,
+      email: valor("email") || null,
+      cnh_a: valor("cnh_a"),
+      ear: valor("ear"),
+      atividade_app: valor("atividade_app"),
+      previsao_inicio: valor("previsao_inicio"),
+      cidade: valor("cidade"),
+      consentimento: document.getElementById("consentimento").checked,
+      consentimento_texto: document.getElementById("texto-consent").textContent.trim(),
+      consentimento_versao: CONFIG.consentimentoVersao,
+      origem: utm.origem, campanha: utm.campanha, conteudo: utm.conteudo,
+      user_agent: navigator.userAgent.slice(0,300),
+      empresa: valor("empresa"),          // honeypot: deve chegar vazio
+      tempo_preenchimento_s: Math.round((Date.now() - inicio)/1000)
+    };
+
+    btnAvancar.disabled = true;
+    btnAvancar.firstChild.nodeValue = "Enviando… ";
+
+    if (MODO_PREVIA){
+      console.info("[PRÉVIA] payload que seria enviado ao n8n:", payload);
+      setTimeout(sucesso, 600);
+      return;
+    }
+
+    fetch(CONFIG.webhookUrl, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(payload)
+    }).then(function(r){
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      sucesso();
+    }).catch(function(){
+      btnAvancar.disabled = false;
+      btnAvancar.firstChild.nodeValue = "Tentar enviar de novo ";
+      erro.textContent = "Não foi possível enviar agora. Confira sua conexão e toque em Tentar enviar de novo.";
+    });
+  }
+
+  function sucesso(){
+    form.hidden = true;
+    var s = document.getElementById("sucesso");
+    s.hidden = false; s.focus();
+  }
+
+  document.querySelectorAll("[data-ir-form]").forEach(function(a){
+    a.addEventListener("click", function(){ setTimeout(function(){ document.getElementById("nome").focus({preventScroll:true}); }, 500); });
+  });
+})();
+</script>
+</body>
+</html>
